@@ -1,0 +1,134 @@
+@charset "ISO-8859-1";
+
+*{
+	margin: 0 auto;
+}
+
+body{
+	background-color: #b2b2b2;
+}
+
+
+.about {
+	color: black;
+	width: 100%;
+	height: 325px;
+	background: url(/images/HeaderPic.jpg);
+	object-fit: cover;
+  	background-position: center;
+  	text-align: center;
+  	align-items: center;
+  	font-family:'DotGothic16', sans-serif;
+}
+
+#about-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Calisto MT,Bookman Old Style,Bookman,Goudy Old Style,Garamond,Hoefler Text,Bitstream Charter,Georgia,serif; 
+	font-size: 50px;
+}
+
+#about-heading h1{
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: mediumorchid;
+  	-webkit-text-stroke: 2px gold;
+}
+
+#about-heading-border{
+	border: solid black 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#about-heading-p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.searchBarTitle{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchBar{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchBarButton{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	color: crimson;
+}
+
+#sumodex{
+	border: solid darkred 5px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 45%;
+	align-items: center;
+	background: red;
+	height: 400px;
+}
+
+	.wrestlerName{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		border: solid black 2px; 
+		width: 20%;
+		height: 6%;
+		background-color: white;
+		color: black;
+	}
+
+	.wrestlerPic{
+		border: solid green 4px; 
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 5%;
+		height: 5%;
+	}
+
+#about-heading-footnote{
+	font-size: 11px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+}
+
+
+.top-divide-bar {
+    display: flex;
+    background: black;
+    padding: 0;
+    width: 100%;
+}
+
+.verticalLine {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
