@@ -74,12 +74,9 @@ body{
 
 #sumodex{
 	border: solid darkred 5px;
-	display: flex;
-	flex-direction: column;
+	background: red;
 	margin: 0 auto;
 	width: 45%;
-	align-items: center;
-	background: red;
 	height: 400px;
 }
 
@@ -92,17 +89,53 @@ body{
 		height: 6%;
 		background-color: white;
 		color: black;
+		font-size: 120%;
 	}
 
 	.wrestlerPic{
-		border: solid green 4px; 
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		width: 5%;
-		height: 5%;
+		border: solid black 4px; 
+		background-color: white;
+		width: 40%;
+		height: 60%;
+		margin: 2%;
+		margin-left: 4%;
 	}
 
+	.lastWrestlerButton{
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		margin-left: 10%;
+		background-color: #f44336;
+		border-radius: 4px;	
+	}
+	
+		.nextWrestlerButton{
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		margin-left: 16%;
+		border-radius: 4px;
+	}
+	
+	
+.btn{
+	padding: 4px 8px;
+	background-color: #f44336;
+	color: white;
+	font-weight: bold
+}
+	
+.verticalLine { 
+    border-left: 4px solid black; 
+    height: 500px; 
+    position:absolute; 
+    left: 50%; 
+    
+} 
+	
+	
+	
 #about-heading-footnote{
 	font-size: 11px;
 	display: flex;
@@ -111,18 +144,6 @@ body{
 	width: 45%;
 }
 
-
-.top-divide-bar {
-    display: flex;
-    background: black;
-    padding: 0;
-    width: 100%;
-}
-
-.verticalLine {
-  display: flex;
-  justify-content: center;
-}
 
 .arrow {
   border: solid black;

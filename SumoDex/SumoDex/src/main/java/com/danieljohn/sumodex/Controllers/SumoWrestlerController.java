@@ -114,30 +114,4 @@ public class SumoWrestlerController {
 		return "redirect:/wrestlers";
 	}
 	
-	
-	@GetMapping("/{id}")
-	public String viewWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
-		viewModel.addAttribute("wrestler", swService.getById(id));	
-		if(session.getAttribute("wrestler") == null) {
-			session.setAttribute("wrestler", 1);
-		}
-		return "learn.jsp";
-	}
-
-	@GetMapping("/next/{id}")
-	public String seeNextWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
-		int nextId = (int) (id + 1);
-		viewModel.addAttribute("wrestler", nextId);
-		return "redirect:/wrestlers/" + nextId;
-		
-	}
-	
-	@GetMapping("/last/{id}")
-	public String seeLastWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
-		int lastId = (int) (id - 1);
-		viewModel.addAttribute("wrestler", lastId);
-		return "redirect:/wrestlers/" + lastId;
-		
-	}
-	
 }

@@ -27,35 +27,23 @@
 		 <div class="searchBarButton"><button action="">Search</button></div>
 	
 	<section id="sumodex">
-		<div class="wrestlerName"><p>TEST<c:out value="${wrestler.getShikona()}"></c:out></p></div>
-		<div class="top-divide-bar"><hr></div>
+		<div class="wrestlerName"><p><c:out value="${wrestler.shikona}"/></p></div>
 		
 		<div class="wrestlerPic">
-		<c:forEach items="${wrestler.pics}" var="pics">
-		<img src="${pic.image_url}">
-		</c:forEach>
+		<p>PIC</p>
 		</div>
 		
-		<div class="divide-bar"></div>
-		<div class="wrestlerInfo"></div>
-		<div class="card-body">
-    		<h5 class="wrestlerName"><c:out value="${wrestler.Shikona}"/></h5>
-    		<p class="card-text"><c:out value="${card.wordNativeLanguage}"/></p>
-  		</div>
 		<div class="lastWrestlerButton">
-		<form method="GET" action="/learn/last/${wrestler.id}">
-			<button class="btn btn-warning">Next</button>
+		<form method="GET" action="/wrestlers/last/${wrestler.id}">
+			<button class="btn btn-warning">Last</button>
 		</form>		
 		</div>		
 		<div class="nextWrestlerButton">
-		<form method="GET" action="/learn/next/${wrestler.id}">
+		<form method="GET" action="/wrestlers/next/${wrestler.id}">
 			<button class="btn btn-warning">Next</button>
-		</form>		
-		</div>
-		<div class="verticalLine">
-  			some other content
-		</div>
-		<!-- Next Wrestler and Last Wrester Buttons? -->
+		</form>
+		</div> 
+		<div class="verticalLine"></div>
 		<!-- Links to profiles and youtubes? Sumodb, actual sumo website -- mouse will tell user what link is with hover -->
 	</section>
 	
