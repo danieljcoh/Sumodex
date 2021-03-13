@@ -67,16 +67,103 @@
 	<section id="current-sumo-tournament">
 	<h1>WATCH THE CURRENT TOURNAMENT</h1>
 	
-	<h1>PAST TOURNAMENT WINNERS AND SCORES</h1>
-	<p>NINJA GOLD HERE</p>
-	
-	
+	<div>
+		<h1>Recent Tournaments</h1>
+		<table>
+			<tr>
+				<th>Year</th>
+				<th>Honbash</th>
+				<th>Shikona</th>
+				<th>Final Score</th>
+			</tr>
+			<tr>
+				<td>2021</td>
+				<td>Hatsu Basho</td>
+				<td>Daieisho</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>November</td>
+				<td>Takakeisho</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>September</td>
+				<td>Shodai</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>July</td>
+				<td>Terunofuji</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>May</td>
+				<td>No tournament</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>March</td>
+				<td>Hakuho</td>
+				<td>13-2-0</td>
+			</tr>
+			<tr>
+				<td>2020</td>
+				<td>January</td>
+				<td>No Tokushoryu</td>
+				<td>14-1-0</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<h1>Upcoming Tournaments</h1>
+				<table>
+			<tr>
+				<th>Tournament</th>
+				<th>Venue</th>
+				<th>Tickets Sold From</th>
+				<th>First to Last Day</th>
+			</tr>
+			<tr>
+				<td>The March Tournament</td>
+				<td>Kokugikan</td>
+				<td>February 28, 2021</td>
+				<td>March 14, 2021 - March 28, 2021</td>
+			</tr>
+			<tr>
+				<td>The May Tournament</td>
+				<td>Kokugikan</td>
+				<td>April 10, 2021</td>
+				<td>May 9, 2021 - May 23, 2021</td>
+			</tr>
+			<tr>
+				<td>The July Tournament</td>
+				<td>Aichi Prefectural Gymnasium</td>
+				<td>May 22, 2021</td>
+				<td>July 4, 2021 - July 18, 2021</td>
+			</tr>
+			<tr>
+				<td>The September Tournament</td>
+				<td>Kokugikan</td>
+				<td>August 7, 2021</td>
+				<td>September 12, 2021 - September 26, 2021</td>
+			</tr>
+			<tr>
+				<td>The November Tournament</td>
+				<td>Fukuoka Kokusai Center</td>
+				<td>September 18, 2021</td>
+				<td>November 14, 2021 - November 28, 2021</td>
+			</tr>
+		</table>
+		<p><a href="https://trulytokyo.com/how-to-buy-tickets-for-a-tokyo-sumo-match/" target="_blank">Learn how to buy tickets here</a></p>
+	</div>
 	</section>
-	
-	
-	
-	
-	
+
 	<section class="sumo-rules">
 	<h1>Sumo Ruleset</h1>
 		
