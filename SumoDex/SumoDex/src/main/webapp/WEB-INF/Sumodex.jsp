@@ -31,6 +31,9 @@
 		
 		<div class="wrestlerPic">
 		<p>PIC</p>
+		<c:forEach items="${pictures}" var="pic">
+		<img src="${piture.image_url }">
+		</c:forEach>
 		</div>
 		
 		<div class="wrestlerInfo">
@@ -60,8 +63,19 @@
 		<!-- Links to profiles and youtubes? Sumodb, actual sumo website -- mouse will tell user what link is with hover -->
 		
 	</section>
+
+	<section id="current-sumo-tournament">
+	<h1>WATCH THE CURRENT TOURNAMENT</h1>
 	
-	<i class="arrow down"><p>Down arrow: </p></i>
+	<h1>PAST TOURNAMENT WINNERS AND SCORES</h1>
+	<p>NINJA GOLD HERE</p>
+	
+	
+	</section>
+	
+	
+	
+	
 	
 	<section class="sumo-rules">
 	<h1>Sumo Ruleset</h1>

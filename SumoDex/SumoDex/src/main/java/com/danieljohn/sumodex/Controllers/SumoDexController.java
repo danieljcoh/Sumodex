@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.danieljohn.sumodex.Models.SumoWrestler;
+import com.danieljohn.sumodex.Services.PictureService;
 import com.danieljohn.sumodex.Services.SumoWrestlerService;
 
 @Controller
@@ -21,6 +22,9 @@ public class SumoDexController {
 	@Autowired
 	private SumoWrestlerService swService;
 	
+	@Autowired 
+	private PictureService pService;
+	
 //	@GetMapping("")
 //	public String home() {
 //		return "Sumodex.jsp";
@@ -29,6 +33,7 @@ public class SumoDexController {
 	@GetMapping("/{id}")
 	public String viewWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
 		viewModel.addAttribute("wrestler", swService.getById(id));	
+		viewModel.addAttribute("pictures", this.pService.wrestlerPictures(wrestler));
 		if(session.getAttribute("wrestler") == null) {
 			session.setAttribute("wrestler", 1);
 		}
@@ -39,6 +44,10 @@ public class SumoDexController {
 	public String seeNextWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
 		int nextId = (int) (id + 1);
 		viewModel.addAttribute("wrestler", nextId);
+		if(nextId == 4) {
+			nextId = 1;
+			return "redirect:/wrestler/" + nextId;
+		}
 		return "redirect:/wrestler/" + nextId;
 		
 	}
@@ -47,6 +56,10 @@ public class SumoDexController {
 	public String seeLastWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
 		int lastId = (int) (id - 1);
 		viewModel.addAttribute("wrestler", lastId);
+		if(lastId == 0) {
+			lastId = 3;
+			return "redirect:/wrestler/" + lastId;		
+		}
 		return "redirect:/wrestler/" + lastId;
 		
 	}

@@ -36,6 +36,10 @@ public class Picture {
 		this.createdAt = new Date();
 	}
 
+	public Picture() {
+		
+	}
+
 	//CONSTRUCTOR
 	public Picture(String image_url, SumoWrestler wrestler) {
 		
