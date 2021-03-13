@@ -93,6 +93,7 @@ body{
 	}
 
 	.wrestlerPic{
+		display: inline-block;
 		border: solid black 4px; 
 		background-color: white;
 		width: 40%;
@@ -102,6 +103,7 @@ body{
 	}
 
 	.lastWrestlerButton{
+		display: inline-block;
 		margin: 0;
 		padding: 0;
 		display: inline-block;
@@ -110,12 +112,24 @@ body{
 		border-radius: 4px;	
 	}
 	
-		.nextWrestlerButton{
+	.nextWrestlerButton{
+		display: inline-block;
 		margin: 0;
 		padding: 0;
 		display: inline-block;
 		margin-left: 16%;
 		border-radius: 4px;
+	}
+	
+	.wrestlerInfo{
+		display: inline-block;
+		border: solid black 4px; 
+		background-color: white;
+		width: 40%;
+		height: 60%;
+		margin: 0;
+		margin-left: 10%;
+		font-weight: 500;
 	}
 	
 	
@@ -124,6 +138,7 @@ body{
 	background-color: #f44336;
 	color: white;
 	font-weight: bold
+	
 }
 	
 .verticalLine { 

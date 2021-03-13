@@ -33,18 +33,32 @@
 		<p>PIC</p>
 		</div>
 		
+		<div class="wrestlerInfo">
+			<p><strong>Shikona: </strong><c:out value="${wrestler.shikona}"/></p>
+			<p><strong>Real Name: </strong><c:out value="${wrestler.name}"/></p>
+			<p><strong>Rank: </strong><c:out value="${wrestler.sumoRank}"/></p>
+			<p><strong>Birthday: </strong><c:out value="${wrestler.birthday}"/></p>
+			<p><strong>Birthplace: </strong><c:out value="${wrestler.birthplace}"/></p>
+			<p><strong>Heya: </strong><c:out value="${wrestler.heya}"/></p>
+			<p><strong>Height: </strong><c:out value="${wrestler.height}"/></p>
+			<p><strong>Weight: </strong><c:out value="${wrestler.weight}"/></p>
+			<p><strong>Favorite Technique: </strong><c:out value="${wrestler.favTechnique}"/></p>
+		</div>
+		
 		<div class="lastWrestlerButton">
-		<form method="GET" action="/wrestlers/last/${wrestler.id}">
+		<form method="GET" action="/wrestler/last/${wrestler.id}">
 			<button class="btn btn-warning">Last</button>
 		</form>		
 		</div>		
 		<div class="nextWrestlerButton">
-		<form method="GET" action="/wrestlers/next/${wrestler.id}">
+		<form method="GET" action="/wrestler/next/${wrestler.id}">
 			<button class="btn btn-warning">Next</button>
 		</form>
 		</div> 
+		
 		<div class="verticalLine"></div>
 		<!-- Links to profiles and youtubes? Sumodb, actual sumo website -- mouse will tell user what link is with hover -->
+		
 	</section>
 	
 	<i class="arrow down"><p>Down arrow: </p></i>
