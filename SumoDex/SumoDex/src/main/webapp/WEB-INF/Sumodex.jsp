@@ -23,16 +23,18 @@
 		</div>
 		
 		<div class="searchBarTitle"><h3>Search your Favorite Sumo Wrestlers</h3></div>
-		<div class="searchBar"><input type="text" name="" placeholder="Search Sumodex..."></div>
-		 <div class="searchBarButton"><button action="">Search</button></div>
+		<div class="searchBarButton">		
+		<form method="GET" action="/wrestler/search">
+			<button class="btn btn-warning">Search</button>
+		</form>
+		</div>
 	
 	<section id="sumodex">
 		<div class="wrestlerName"><p><c:out value="${wrestler.shikona}"/></p></div>
 		
 		<div class="wrestlerPic">
-		<p>PIC</p>
-		<c:forEach items="${pictures}" var="pic">
-		<img src="${piture.image_url }">
+		<c:forEach items="${pics}" var="pic">
+		<img src="${pic.image_url }" alt="image of <c:out value="${wrestler.shikona}"/>">
 		</c:forEach>
 		</div>
 		
@@ -67,6 +69,8 @@
 	<section id="current-sumo-tournament">
 	<h1>WATCH THE CURRENT TOURNAMENT</h1>
 	
+		<p>Sumo Wrestling is Japan's oldest sport daying back over 2000 years ago. More presently Japan holds a Sumo Tournament every two months, or six times a year.
+		Each tournament, also known as a Honbasho, has a specific title and starts on a specific day and a specific month.</p>
 	<div>
 		<h1>Recent Tournaments</h1>
 		<table>
@@ -202,8 +206,6 @@
 		
 		</section>
 		<section>
-		<p>Sumo Wrestling is Japan's oldest sport daying back over 2000 years ago. More presently Japan holds a Sumo Tournament every two months, or six times a year.
-		Each tournament, also known as a Honbasho, has a specific title and starts on a specific day and a specific month.</p>
 		<table>
 		<tr>
 			<th>Honbasho</th>

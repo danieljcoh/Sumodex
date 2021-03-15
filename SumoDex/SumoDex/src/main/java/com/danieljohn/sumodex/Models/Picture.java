@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
@@ -24,9 +24,10 @@ public class Picture {
 	private Long id;
 	private String image_url;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="sumowrestler_id")
 	private SumoWrestler wrestler;
+	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyy-MM-DD HH:mm:ss")
 	private Date createdAt;

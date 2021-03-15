@@ -1,14 +1,12 @@
 package com.danieljohn.sumodex.Models;
 
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -30,8 +28,8 @@ public class SumoWrestler {
 	private String favTechnique;
 	
 	//OneToMany
-	@OneToMany(mappedBy="wrestler", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	private List<Picture> pics;
+	@OneToOne(mappedBy="wrestler", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	private Picture pics;
 
 	//CONSTRUCTOR
 	public SumoWrestler() {
@@ -121,12 +119,12 @@ public class SumoWrestler {
 	}
 
 
-	public List<Picture> getPics() {
+	public Picture getPics() {
 		return pics;
 	}
 
 
-	public void setPics(List<Picture> pics) {
+	public void setPics(Picture pics) {
 		this.pics = pics;
 	}
 

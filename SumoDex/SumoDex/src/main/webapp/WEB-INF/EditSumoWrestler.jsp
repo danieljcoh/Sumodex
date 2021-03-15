@@ -23,57 +23,57 @@
 				<p>${error}</p>
 			</c:forEach>
 			<hr>
+			
 			<form:form method="POST" action="/wrestlers/update/${wrestler.id}" modelAttribute="wrestler">
 				<div class="form-group">
-					<form:label path="shikona"> Shikona: 
+					<form:label class="col-sm-2 col-form-label" path="shikona"> Shikona: 
 					<form:errors path="shikona"/>
 					<form:input path="shikona"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="name"> Real Name:
+					<form:label class="col-sm-2 col-form-label" path="name"> Real Name:
 					<form:input path="name"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="sumoRank"> Sumo Rank:
+					<form:label class="col-sm-2 col-form-label" path="sumoRank"> Sumo Rank:
 					<form:input path="sumoRank"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="birthplace"> Birthplace:
+					<form:label class="col-sm-2 col-form-label" path="birthplace"> Birthplace:
 					<form:input path="birthplace"/>
 					</form:label>
 				</div>
 				<div class="form-group">
-					<form:label path="birthday"> Birthday:
+					<form:label class="col-sm-2 col-form-label" path="birthday"> Birthday:
 					<form:input path="birthday"/>
 					</form:label>
 				</div>
 				<div class="form-group">
-					<form:label path="heya"> Heya:
+					<form:label class="col-sm-2 col-form-label" path="heya"> Heya:
 					<form:input path="heya"/>
 					</form:label>
 				</div>
 				<div class="form-group">
-					<form:label path="height"> Height:
+					<form:label class="col-sm-2 col-form-label" path="height"> Height:
 					<form:input path="height"/>
 					</form:label>
 				</div>
 				<div class="form-group">
-					<form:label path="weight"> Weight:
+					<form:label class="col-sm-2 col-form-label" path="weight"> Weight:
 					<form:input path="weight"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="favTechnique"> Favorite Technique:
+					<form:label class="col-sm-2 col-form-label" path="favTechnique"> Favorite Technique:
 					<form:input path="favTechnique"/>
 					</form:label>
 				</div>
-			<button class="btn btn-dark">Save edits</button>
+			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Save edits</button>
+			<a class="btn btn-dark col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/wrestlers/delete/${wrestler.id}">Delete Wrestler</a>
 		</form:form>
-		<hr>
 	</div>
-	<div><a style="padding: 2px 6px; border: 1px solid gray; border-radius: 5px; text-decoration: none; color: black;" href="/wrestlers/delete/${wrestler.id}">Delete Wrestler</a></div>
 </body>
 </html>

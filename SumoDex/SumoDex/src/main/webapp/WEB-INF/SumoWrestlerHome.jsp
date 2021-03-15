@@ -46,7 +46,7 @@
 		</table>
 	</div>
 	<div>
-		<a href="/wrestlers/createNewWrestler" class="btn btn-primary">Create a new Sumo Wrestler</a>
+		<a href="/wrestlers/createNewWrestler" class="btn btn-primary d-flex justify-content-center">Create a new Sumo Wrestler</a>
 	</div>
 </body>
 </html>
