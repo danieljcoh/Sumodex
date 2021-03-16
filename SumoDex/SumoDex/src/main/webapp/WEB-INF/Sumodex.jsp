@@ -22,12 +22,6 @@
 			they are the only public profiles that I could find.</p></div>
 		</div>
 		
-		<div class="login">
-		<form method="GET" action="/admin/login">
-			<button class="btn btn-warning">Login</button>
-		</form>
-		</div>
-		
 		<div class="searchBarTitle"><h3>Search your Favorite Sumo Wrestlers</h3></div>
 		<div class="searchBarButton">		
 		<form method="GET" action="/wrestler/search">
@@ -67,6 +61,9 @@
 		</form>
 		</div> 
 		
+		<a href="http://www.sumo.or.jp/EnSumoDataRikishi/search/"><button>Official Rikishi Data Search</button></a>
+		<a href="http://sumodb.sumogames.de/Rikishi.aspx"><button>Sumo Database Search</button></a>
+		
 		<div class="verticalLine"></div>
 		<!-- Links to profiles and youtubes? Sumodb, actual sumo website -- mouse will tell user what link is with hover -->
 		
@@ -74,6 +71,20 @@
 
 	<section id="current-sumo-tournament">
 	<h1>WATCH THE CURRENT TOURNAMENT</h1>
+		<h3>Youtube Channels</h3>
+		
+		<h4>Natto Sumo</h4>
+		<p>A Youtuber that posts broadcasts of the current Sumo Basho in Japanese.</p>
+		 <a href="https://www.youtube.com/channel/UCy8YnV1QyWpHLDU56FtAJxA"><img src="/images/YoutubeChannels/NattoSumo_PicOnly.JPG" alt="Natto Sumo" width="150" height="150"></a>
+		 
+		<h4>Jason Sumo</h4>
+		<p>An awesome Youtuber who shows Sumo bouts on his website, has fantasy sumo, gives prizes to the winners, and has fun commentary.</p>
+		 <a href="https://www.youtube.com/channel/UCjEHJ_fQxC3wgXcIazGWt3Q"><img src="/images/YoutubeChannels/JasonSumo_PicOnly.JPG" alt="Jason Sumo" width="150" height="150"></a>
+	
+		<h4>Kintamayama</h4>
+		<p>A Youtuber that posts broadcasts of the current Sumo Basho in English.</p>
+		 <a href="https://www.youtube.com/channel/UCsyhbQggi0M3t_DMePOLgSw"><img src="/images/YoutubeChannels/Kintamayama_PicOnly.JPG" alt="Kintamayama Sumo" width="150" height="150"></a>
+	
 	
 		<p>Sumo Wrestling is Japan's oldest sport daying back over 2000 years ago. More presently Japan holds a Sumo Tournament every two months, or six times a year.
 		Each tournament, also known as a Honbasho, has a specific title and starts on a specific day and a specific month.</p>
