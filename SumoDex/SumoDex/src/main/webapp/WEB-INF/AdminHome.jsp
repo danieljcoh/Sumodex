@@ -31,6 +31,19 @@
       			<div class="card">
   				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
   					<div class="card-body">
+    					<h4 class="card-title">Manage Passcodes</h4>
+    					<p class="card-text">
+     					Click here to view a list of Passcodes, Create new ones,
+     					edit old ones, or delete them.
+    					</p>
+    					<a href="/admin/passcodeList" class="btn btn-info col text-center">Manage Passcodes</a>
+  					</div>	
+				</div>
+    		</div>
+    		<div class="col-sm mx-auto">
+      			<div class="card">
+  				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
+  					<div class="card-body">
     					<h4 class="card-title">Manage Champions</h4>
     					<p class="card-text">
      					Click here to view a list of Champions, Create new ones,

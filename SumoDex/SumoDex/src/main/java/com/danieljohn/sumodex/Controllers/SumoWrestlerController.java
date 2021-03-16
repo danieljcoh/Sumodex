@@ -64,12 +64,6 @@ public class SumoWrestlerController {
 		return "redirect:/wrestlers";
 	}
 	
-	@GetMapping("/about/{id}")
-	public String aboutWrestler(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
-		viewModel.addAttribute("wrestler", swService.getById(id));
-		return "aboutTask.jsp";
-	}
-	
 	@GetMapping("/edit/{id}")
 	public String editWrestler(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
 		viewModel.addAttribute("wrestler", swService.getById(id));
