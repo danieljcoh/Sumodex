@@ -1,6 +1,7 @@
 package com.danieljohn.sumodex.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,5 +38,10 @@ public class ChampionService {
 	//DELETE CHAMPION
 	public void deleteChampion(Long id) {
 		this.cRepo.deleteById(id);
+	}
+	
+	//GET WRESTLER BY SHIKONA
+	public Champion getByShikona(String shikona) {
+		return this.cRepo.findByShikona(shikona);
 	}
 }

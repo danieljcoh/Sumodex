@@ -11,4 +11,8 @@ import com.danieljohn.sumodex.Models.Champion;
 public interface ChampionRepository extends CrudRepository<Champion, Long>{
 
 	List<Champion> findAll();
+
+	Champion findByShikona(String shikona);
+	
+	boolean existsByShikona(String shikona);
 }

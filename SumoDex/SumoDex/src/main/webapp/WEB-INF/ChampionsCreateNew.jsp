@@ -19,22 +19,22 @@
 			<hr>
 			<form:form method="POST" action="/champions/submitNewChampion" modelAttribute="champion">
 				<div class="form-group">
-					<form:label path="shikona"> Shikona: 
+					<form:label class="col-sm-2 col-form-label" path="shikona"> Shikona: 
 					<form:errors path="shikona"/>
 					<form:input path="shikona"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="finalScore"> Final Score:
+					<form:label class="col-sm-2 col-form-label" path="finalScore"> Final Score:
 					<form:input path="finalScore"/>
 					</form:label>
 				</div>
 				<div>
-					<form:label path="tournamentBasho"> Basho:
+					<form:label class="col-sm-2 col-form-label" path="tournamentBasho"> Basho:
 					<form:input path="tournamentBasho"/>
 					</form:label>
 				</div>
-			<button class="btn btn-dark">Create New Champion</button>
+			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Create New Champion</button>
 		</form:form>
 		<hr>
 	</div>

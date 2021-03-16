@@ -72,7 +72,7 @@
 					</form:label>
 				</div>
 			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Save edits</button>
-			<a class="btn btn-dark col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/wrestlers/delete/${wrestler.id}">Delete Wrestler</a>
+			<a class="btn btn-danger col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/wrestlers/delete/${wrestler.id}">Delete Wrestler</a>
 		</form:form>
 	</div>
 </body>

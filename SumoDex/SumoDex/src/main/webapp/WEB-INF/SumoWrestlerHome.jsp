@@ -10,9 +10,11 @@
 <title>Makuuchi Sumo Wrestlers</title>
 </head>
 <body>
+	<nav class="nav flex-column font-weight-bold h3 border border-success d-inline-block ml-5 mt-5">
+  		<a class="nav-link active text-success" href="/admin/home">Go To Admin Home</a>
+	</nav>
 	<div class="container">
 		<div class="row">
-			<h1 class="col-6">Welcome!</h1>
 		</div>
 		<h3>Sumo Wrestlers</h3>
 		<table class="table table-dark">
@@ -46,7 +48,7 @@
 		</table>
 	</div>
 	<div>
-		<a href="/wrestlers/createNewWrestler" class="btn btn-primary d-flex justify-content-center">Create a new Sumo Wrestler</a>
+		<a href="/wrestlers/createNewWrestler" class="btn btn-primary btn-block p-4">Create a new Sumo Wrestler</a>
 	</div>
 </body>
 </html>

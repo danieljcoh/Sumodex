@@ -19,25 +19,24 @@
 			<hr>
 			<form:form method="POST" action="/champions/update/${champion.id}" modelAttribute="champion">
 				<div class="form-group">
-					<form:label path="shikona"> Shikona: 
+					<form:label class="col-sm-2 col-form-label" path="shikona"> Shikona: 
 					<form:errors path="shikona"/>
 					<form:input path="shikona"/>
 					</form:label>
 				</div>
-				<div>
-					<form:label path="finalScore"> Final Score:
+				<div class="form-group">
+					<form:label class="col-sm-2 col-form-label" path="finalScore"> Final Score:
 					<form:input path="finalScore"/>
 					</form:label>
 				</div>
-				<div>
-					<form:label path="tournamentBasho"> Basho:
+				<div class="form-group">
+					<form:label class="col-sm-2 col-form-label" path="tournamentBasho"> Basho:
 					<form:input path="tournamentBasho"/>
 					</form:label>
 				</div>
-			<button class="btn btn-dark">Create New Champion</button>
+			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Save Edits Champion</button>
+			<a class="btn btn-danger col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/champions/delete/${champion.id}">Delete Champion</a>
 		</form:form>
-		<hr>
 	</div>
-	<div><a style="padding: 2px 6px; border: 1px solid gray; border-radius: 5px; text-decoration: none; color: black;" href="/champions/delete/${champion.id}">Delete Champion</a></div>
 </body>
 </html>

@@ -22,6 +22,12 @@
 			they are the only public profiles that I could find.</p></div>
 		</div>
 		
+		<div class="login">
+		<form method="GET" action="/admin/login">
+			<button class="btn btn-warning">Login</button>
+		</form>
+		</div>
+		
 		<div class="searchBarTitle"><h3>Search your Favorite Sumo Wrestlers</h3></div>
 		<div class="searchBarButton">		
 		<form method="GET" action="/wrestler/search">
@@ -124,6 +130,7 @@
 			</tr>
 		</table>
 	</div>
+	
 	<div>
 		<h1>Upcoming Tournaments</h1>
 				<table>

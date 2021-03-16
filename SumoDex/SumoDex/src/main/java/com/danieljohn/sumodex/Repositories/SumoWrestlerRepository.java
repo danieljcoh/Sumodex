@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import com.danieljohn.sumodex.Models.Champion;
 import com.danieljohn.sumodex.Models.SumoWrestler;
 
 @Repository
