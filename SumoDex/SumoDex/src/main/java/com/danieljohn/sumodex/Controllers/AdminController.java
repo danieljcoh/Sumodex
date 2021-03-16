@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.danieljohn.sumodex.Models.Passcode;
+import com.danieljohn.sumodex.Models.PasswordString;
 import com.danieljohn.sumodex.Models.SumoWrestler;
 import com.danieljohn.sumodex.Services.ChampionService;
-import com.danieljohn.sumodex.Services.PasscodeService;
+import com.danieljohn.sumodex.Services.PasswordService;
 
 @Controller
 @RequestMapping("/admin")
@@ -30,7 +30,7 @@ public class AdminController {
 	private ChampionService cService;
 	
 	@Autowired
-	private PasscodeService pcService;
+	private PasswordService pwService;
 
 	@GetMapping("/login")
 	public String adminLogin() {
@@ -55,46 +55,46 @@ public class AdminController {
 		return "AdminHome.jsp";
 	}
 	
-	@GetMapping("/passcodeList")
-	public String passcodeList(Model viewModel) {
-		List<Passcode> allPasscodes = this.pcService.getAllPasscodes();	
-		viewModel.addAttribute("allPasscodes", allPasscodes);
-		return "PasscodeList.jsp";
+	@GetMapping("/passwordList")
+	public String passwordList(Model viewModel) {
+		List<PasswordString> allPasswords = this.pwService.getAllPasswords();	
+		viewModel.addAttribute("allPasswords", allPasswords);
+		return "PasswordList.jsp"; 
 	}
 	
-	@GetMapping("/createNewPasscode")
-	public String newPasscode(@ModelAttribute("passcode") Passcode passcode, Model viewModel) {
-		return "NewPasscode.jsp";
+	@GetMapping("/createNewPassword")
+	public String newPassword(@ModelAttribute("passwordString") PasswordString password, Model viewModel) {
+		return "NewPassword.jsp";
 	}
 	
-	@PostMapping("/submitNewPasscode")
-	public String create(@Valid @ModelAttribute("passcode") Passcode passcode, BindingResult result) {
+	@PostMapping("/submitNewPassword")
+	public String createPassword(@Valid @ModelAttribute("passwordString") PasswordString password, BindingResult result) {
 		if(result.hasErrors()) {
 			System.out.println("errors");
-			return "redirect:/createNewPasscode";
+			return "redirect:/admin/createNewPassword";
 		}
-		this.pcService.create(passcode);
-		return "redirect:/passcodeList";
+		this.pwService.create(password);
+		return "redirect:/admin/passwordList";
 	}
 	
-	@GetMapping("/passcode/edit/{id}")
-	public String editPasscode(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("passcode") Passcode passcode) {
-		viewModel.addAttribute("passcode", pcService.getById(id));
-		return "EditPasscode.jsp";
+	@GetMapping("/password/edit/{id}")
+	public String editPassword(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("passwordString") PasswordString password) {
+		viewModel.addAttribute("passwordString", pwService.getById(id));
+		return "EditPassword.jsp";
 	}
 	
-	@PostMapping("/passcode/update/{id}")
-	public String updatePasscode(@ModelAttribute("passcode") Passcode passcode, BindingResult result) {
+	@PostMapping("/password/update/{id}")
+	public String updatePassword(@ModelAttribute("passwordString") PasswordString password, BindingResult result) {
 		if(result.hasErrors()) {
-			return "EditPasscode.jsp";
+			return "EditPassword.jsp";
 		}
-		this.pcService.updatePasscode(passcode);
-		return "redirect:/admin/passcodeList";
+		this.pwService.updatePassword(password);
+		return "redirect:/admin/passwordList";
 	}
 	
-	@GetMapping("/passcode/delete/{id}")
-	public String deletePasscode(@PathVariable("id") Long id) {
-		this.pcService.deletePasscode(id);;
-		return "redirect:/admin/passcodeList";
+	@GetMapping("/password/delete/{id}")
+	public String deletePassword(@PathVariable("id") Long id) {
+		this.pwService.deletePassword(id);;
+		return "redirect:/admin/passwordList";
 	}
 }

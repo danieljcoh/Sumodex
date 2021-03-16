@@ -7,7 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<title>Passcodes</title>
+<title>Passwords</title>
 </head>
 <body>
 	<nav class="nav flex-column font-weight-bold h3 border border-success d-inline-block ml-5 mt-5">
@@ -16,25 +16,25 @@
 	<div class="container">
 		<div class="row">
 		</div>
-		<h3>Passcodes</h3>
+		<h3>Passwords</h3>
 		<table class="table table-dark">
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Passcode</th>
+					<th>Passwords</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${allPasscodes}" var="allPasscodes">
+				<c:forEach items="${allPasswords}" var="allPasswords">
 				<tr>
-					<td><a href="/admin/passcode/edit/${allPasscodes.id}">${allPasscodes.id}</a></td>
-					<td>${allPasscodes.passcode}</td>
+					<td>${allPasswords.id}</td>
+					<td><a href="/admin/password/edit/${allPasswords.id}">${allPasswords.password}</a></td>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
 	<div>
-		<a href="/admin/createNewPasscode" class="btn btn-primary btn-block p-4">Create a new Passcode</a>
+		<a href="/admin/createNewPassword" class="btn btn-primary btn-block p-4">Create a new Password</a>
 	</div>
 </body>
 </html>

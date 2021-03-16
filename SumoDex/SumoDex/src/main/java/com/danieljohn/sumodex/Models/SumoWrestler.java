@@ -27,7 +27,7 @@ public class SumoWrestler {
 	private String weight;
 	private String favTechnique;
 	
-	//OneToMany
+	//OneToOne
 	@OneToOne(mappedBy="wrestler", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Picture pics;
 

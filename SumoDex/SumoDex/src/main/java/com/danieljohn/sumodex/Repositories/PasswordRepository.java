@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.danieljohn.sumodex.Models.Passcode;
+import com.danieljohn.sumodex.Models.PasswordString;
 
 @Repository
-public interface PasscodeRepository extends CrudRepository<Passcode, Long>{
+public interface PasswordRepository extends CrudRepository<PasswordString, Long>{
 
-	List<Passcode> findAll();
+	List<PasswordString> findAll();
 }
  

@@ -7,17 +7,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="passcodes")
-public class Passcode {
+@Table(name="passwords")
+public class PasswordString {
 	
 	//MEMBER VARIABLES
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String passcode;
+	private String password;
 	
 	//CONSTRUCTOR
-	public Passcode() {
+	public PasswordString() {
 		
 	}
 
@@ -30,13 +30,18 @@ public class Passcode {
 		this.id = id;
 	}
 
-	public String getPasscode() {
-		return passcode;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasscode(String passcode) {
-		this.passcode = passcode;
+	public void setPassword(String password) {
+		this.password = password;
 	}
+
+
+
+
+	
 	
 	
 
