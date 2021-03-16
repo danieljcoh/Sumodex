@@ -22,8 +22,12 @@
 			</form:form> --%>
       			<form method="POST" action="/admin/login">
 						<div class="form-group">
+							<label>ID#: </label>
+							<input class="form-control" type="password" name="idNumber">
+						</div>
+						<div class="form-group">
 							<label>Password: </label>
-								<input class="form-control" type="password" name="passwordString">
+							<input class="form-control" type="password" name="passwordString">
 						</div>
 							<button class="btn btn-primary" type="submit">Submit</button>
 					</form>
@@ -33,5 +37,17 @@
     		</div>
   		</div>
 	</div>
+	
+<%-- 	
+	<div>
+				<form:label path="assignee"> Assignee:
+				<form:select path="assignee">
+					<form:option path="assignee" value=""></form:option>
+					<c:forEach items="${allUsers}" var="userName">
+						<form:option path="assignee" value="${userName}">${userName}</form:option>
+					</c:forEach>
+				</form:select>
+				</form:label>
+				</div> --%>
 </body>
 </html>

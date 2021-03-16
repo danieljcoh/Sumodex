@@ -38,9 +38,13 @@ public class AdminController {
 	}
 	
 	@PostMapping("/login")
-	public String login(@RequestParam("passwordString") String passwordString, Model viewModel) {
-		System.out.println(passwordString);
-		Long currentPasswordID = (long) 14;
+	public String login(@RequestParam("idNumber") Long idNumber, @RequestParam("passwordString") String passwordString, Model viewModel) {
+		Long chosenIdNumber = idNumber;
+		//System.out.println(idNumber);
+		//System.out.println(passwordString);
+		Long currentPasswordID = chosenIdNumber;
+		//System.out.println(chosenIdNumber);
+		//Long currentPasswordID = (long) 14;
 		String currentPassword = this.pwService.getById(currentPasswordID).getPasswordString();
 		if(passwordString != currentPassword) {
 			System.out.println("that was the wrong input");
