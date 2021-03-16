@@ -11,23 +11,23 @@
 </head>
 <body>
 	<div class="container">
-		<h3>Edit ${password.password}</h3>
+		<h3>Edit ${password.passwordString}</h3>
 		
 			<c:forEach items="${errors}" var="error">
 				<p>${error}</p>
 			</c:forEach>
 			<hr>
 			
-			<form:form method="POST" action="/admin/password/update/${passwordString.id}" modelAttribute="passwordString">
+			<form:form method="POST" action="/admin/password/update/${password.id}" modelAttribute="password">
 				<div class="form-group">
-					<form:label class="col-sm-2 col-form-label" path="password"> Password: 
-					<form:errors path="password"/>
-					<form:input path="password"/>
+					<form:label class="col-sm-2 col-form-label" path="passwordString"> Password: 
+					<form:errors path="passwordString"/>
+					<form:input path="passwordString"/>
 					</form:label>
 				</div>
 
 			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Save edits</button>
-			<a class="btn btn-danger col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/admin/password/delete/${passwordString.id}">Delete Password</a>
+			<a class="btn btn-danger col-sm-4 offset-sm-0 mt-4 ml-5 form-control form-inline mb-2 mr-sm-2" href="/admin/password/delete/${password.id}">Delete Password</a>
 		</form:form>
 	</div>
 </body>

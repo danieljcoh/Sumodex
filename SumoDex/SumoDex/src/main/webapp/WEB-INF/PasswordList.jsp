@@ -28,7 +28,7 @@
 				<c:forEach items="${allPasswords}" var="allPasswords">
 				<tr>
 					<td>${allPasswords.id}</td>
-					<td><a href="/admin/password/edit/${allPasswords.id}">${allPasswords.password}</a></td>
+					<td><a href="/admin/password/edit/${allPasswords.id}">${allPasswords.passwordString}</a></td>
 				</c:forEach>
 			</tbody>
 		</table>

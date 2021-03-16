@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.danieljohn.sumodex.Models.PasswordString;
+import com.danieljohn.sumodex.Models.Password;
 import com.danieljohn.sumodex.Models.SumoWrestler;
 import com.danieljohn.sumodex.Services.ChampionService;
 import com.danieljohn.sumodex.Services.PasswordService;
@@ -38,17 +38,19 @@ public class AdminController {
 	}
 	
 	@PostMapping("/login")
-	public String login(@ModelAttribute("wrestler") SumoWrestler wrestler, Model viewModel, @RequestParam("shikona") String shikona, 
-		RedirectAttributes redirectAttributes, HttpSession session) {
-			String realPasscode = "Tommy";
-			System.out.println(shikona);
-			if(shikona != "Tommy") {
-				return "redirect:/admin/login";
-			}
-			else {
-				return "redirect:/admin/home";
-			}
+	public String login(@RequestParam("passwordString") String passwordString, Model viewModel) {
+		System.out.println(passwordString);
+		Long currentPasswordID = (long) 14;
+		String currentPassword = this.pwService.getById(currentPasswordID).getPasswordString();
+		if(passwordString != currentPassword) {
+			System.out.println("that was the wrong input");
+			System.out.println(currentPassword);
+			return "redirect:/admin/login";
 		}
+		else {
+			return "redirect:/admin/home";
+		}
+	}
 	
 	@GetMapping("/home")
 	public String adminHome() {
@@ -57,18 +59,18 @@ public class AdminController {
 	
 	@GetMapping("/passwordList")
 	public String passwordList(Model viewModel) {
-		List<PasswordString> allPasswords = this.pwService.getAllPasswords();	
+		List<Password> allPasswords = this.pwService.getAllPasswords();	
 		viewModel.addAttribute("allPasswords", allPasswords);
 		return "PasswordList.jsp"; 
 	}
 	
 	@GetMapping("/createNewPassword")
-	public String newPassword(@ModelAttribute("passwordString") PasswordString password, Model viewModel) {
+	public String newPassword(@ModelAttribute("password") Password passwordString, Model viewModel) {
 		return "NewPassword.jsp";
 	}
 	
 	@PostMapping("/submitNewPassword")
-	public String createPassword(@Valid @ModelAttribute("passwordString") PasswordString password, BindingResult result) {
+	public String createPassword(@Valid @ModelAttribute("password") Password password, BindingResult result) {
 		if(result.hasErrors()) {
 			System.out.println("errors");
 			return "redirect:/admin/createNewPassword";
@@ -78,17 +80,17 @@ public class AdminController {
 	}
 	
 	@GetMapping("/password/edit/{id}")
-	public String editPassword(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("passwordString") PasswordString password) {
-		viewModel.addAttribute("passwordString", pwService.getById(id));
+	public String editPassword(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("password") Password password) {
+		viewModel.addAttribute("password", pwService.getById(id));
 		return "EditPassword.jsp";
 	}
 	
 	@PostMapping("/password/update/{id}")
-	public String updatePassword(@ModelAttribute("passwordString") PasswordString password, BindingResult result) {
+	public String updatePassword(@ModelAttribute("password") Password passwordString, BindingResult result) {
 		if(result.hasErrors()) {
 			return "EditPassword.jsp";
 		}
-		this.pwService.updatePassword(password);
+		this.pwService.updatePassword(passwordString);
 		return "redirect:/admin/passwordList";
 	}
 	

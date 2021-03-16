@@ -22,8 +22,8 @@
 			</form:form> --%>
       			<form method="POST" action="/admin/login">
 						<div class="form-group">
-							<label>Passcode: </label>
-								<input class="form-control" type="password" name="shikona">
+							<label>Password: </label>
+								<input class="form-control" type="password" name="passwordString">
 						</div>
 							<button class="btn btn-primary" type="submit">Submit</button>
 					</form>
