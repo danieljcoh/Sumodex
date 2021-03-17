@@ -32,31 +32,34 @@ public class AdminController {
 	@Autowired
 	private PasswordService pwService;
 
-	@GetMapping("/login")
+	@GetMapping("/home")
 	public String adminLogin() {
 		return "AdminLogin.jsp";
 	}
 	
 	@PostMapping("/login")
-	public String login(@RequestParam("idNumber") Long idNumber, @RequestParam("passwordString") String passwordString, Model viewModel) {
+	public String login(@RequestParam("idNumber") Long idNumber, @RequestParam("passwordString") String passwordString, Model viewModel,
+			BindingResult result) {
 		Long chosenIdNumber = idNumber;
-		//System.out.println(idNumber);
-		//System.out.println(passwordString);
+		System.out.println(idNumber);
+		System.out.println(passwordString);
 		Long currentPasswordID = chosenIdNumber;
-		//System.out.println(chosenIdNumber);
+		System.out.println(chosenIdNumber);
 		//Long currentPasswordID = (long) 14;
 		String currentPassword = this.pwService.getById(currentPasswordID).getPasswordString();
-		if(passwordString != currentPassword) {
+		if(result.hasErrors()) {
+			System.out.println("errors");
 			System.out.println("that was the wrong input");
 			System.out.println(currentPassword);
 			return "redirect:/admin/login";
-		}
-		else {
+		} else if (passwordString != currentPassword){
+			return "redirect:/admin/login";
+		} else {
 			return "redirect:/admin/home";
 		}
 	}
 	
-	@GetMapping("/home")
+	@GetMapping("/dashboardHome")
 	public String adminHome() {
 		return "AdminHome.jsp";
 	}

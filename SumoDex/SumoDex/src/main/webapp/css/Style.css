@@ -1,0 +1,514 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100, 400, 500,700&display=swap');
+
+body{
+	margin: 0;
+	background: linear-gradient(355deg, rgba(224,246,117,1) 0%, rgba(74,144,228,1) 50%, rgba(81,72,242,1) 100%);;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+header {
+	color: black;
+	width: 100%;
+	height: 150px;
+	background: url(/images/HeaderPic.jpg);
+  	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  	text-align: center;
+  	align-items: center;
+  	font-family:'DotGothic16', sans-serif;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 6px black solid;
+	
+}
+
+header h1 {
+	margin: 0;
+}
+
+#artist-credit {
+	text-align: right;
+	margin: 10px;
+	letter-spacing: 1px;
+	color: white;
+	font-size: 12px;
+}
+
+#main-heading, #main-heading-jp {
+	font-family: Calisto MT,Bookman Old Style,Bookman,Goudy Old Style,Garamond,Hoefler Text,Bitstream Charter,Georgia,serif; 
+	width: 100%;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: mediumorchid;
+  	-webkit-text-stroke: 2px gold;
+}
+
+#main-heading-jp {
+	letter-spacing: 20px;
+}
+
+.about-info {
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 90%;
+	margin: 20px auto;
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	color: white;
+}
+
+.about-info p {
+	margin: 0 0 20px;
+}
+/*---------------------SEARCH CONTAINER-------------------------------*/
+
+.search-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+	text-align: center;
+}
+
+#searchBar {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+}
+
+#searchBarButton {
+	width: 200px;
+	height: 40px;
+	margin: 10px;
+	background-color: gold;
+	border-radius: 10px;
+	font-weight: bold;
+	border: none;
+	font-size: 1.5em;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#searchBarButton:hover {
+	box-shadow: 0 0 40px 40px mediumorchid inset;
+}
+#searchBarTitle {
+	margin: 20px 0 ;
+	color: white;
+	
+}
+/*---------------------SUMODEX-------------------------------*/
+#sumodex-section{
+	margin: 20px auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.sumodex-main {
+	border: solid darkred 5px;
+	background: red;
+	width: 90%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.sumodex-content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90%;
+	margin: 20px 0;
+}
+
+.sumodex-left-side {
+	border-bottom: 3px solid black;
+}
+
+.sumodex-left-side, .sumodex-right-side {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 80%;
+	height: 90%;
+
+}
+
+.wrestlerName{
+	border-bottom: solid black 2px; 
+	border-left: solid black 2px; 
+	border-right: solid black 2px; 
+	width: 50%;
+	background-color: white;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+.wrestlerName p {
+	margin: 0;
+	text-align: center;
+}
+
+
+.wrestlerInfo, .wrestlerPic {
+	background-color: white;
+	border: solid black 2px;
+	width: 98%;
+	height: 70%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.wrestlerPic {
+	margin-top: 40px;
+}
+.wrestlerInfo {
+	margin-top: 30px;
+}
+
+.wrestlerInfo p{
+	margin: 0 10px;
+}
+
+.wrestlerPic img {
+	object-fit: fill;
+	width: 100%;
+	height: 150px;
+}
+
+.picture-buttons, .info-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.picture-buttons button, .info-buttons button {
+	margin: 40px 20px;
+	width: 100px;
+	height: 35px;
+	background: rgb(33, 147, 240); ;
+	border-radius: 20px;
+	color: white;
+	font-family: 'Noto Sans JP', sans-serif;
+	letter-spacing: .4px;
+	cursor: pointer;
+	outline: none;
+}
+
+.picture-buttons form, .info-buttons form {
+	margin: 0;
+}
+/*---------------------ACCORDION-------------------------------*/
+	
+.accordion {
+	background-color: #ffb01d;
+	color: black;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	height: 50px;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1em;
+	border-bottom: #f5cc80 1px solid;
+  }
+
+  .active, .accordion:hover {
+	background-color: #f5cc80;
+  }
+  
+  .panel {
+	padding: 0 18px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+  }
+
+  .panel p {
+	margin: 0;
+}
+
+
+.panel p:first-child {
+	margin: 15px 0 0;
+	}
+
+.panel img {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.accordion:after {
+	content: '\002B'; /* Unicode character for "plus" sign (+) */
+	color: black;
+	float: right;
+	margin-left: 5px;
+	font-size: 20px;
+}
+  
+.active:after {
+	content: "\02212"; /* Unicode character for "minus" sign (-) */
+}
+
+  
+
+/*---------------------TOURNAMENT ----------------------------------*/
+
+.tournament-container table {
+	text-align: left;
+	color: white;
+	font-size: .70em;
+
+}
+
+#recent-tournaments-table {
+	width: 100%;
+	text-align: left;
+	font-size: .85em;
+}
+
+.tournament-container h1{
+	margin: 30px 0 10px;
+}
+
+#recent-tournaments-table th:nth-child(1){
+	width: 75px;
+}
+
+tr:nth-child(even) {
+	background: rgba(63, 63, 63, 0.603)
+}
+
+.tournament-container {
+	background: linear-gradient(171deg, rgba(165,0,0,1) 0%, rgba(15,30,124,1) 64%, rgba(0,165,10,1) 100%);
+	color: white;
+  }
+
+.tournament-container a {
+	color: white;
+}
+
+.tournament-container p:last-child {
+	margin: 0 0 20px;
+}
+
+/*---------------------SUMO RULESET-------------------------------*/
+
+.sumo-ruleset-container {
+	background: linear-gradient(171deg, rgba(0,165,10,1) 0%, rgba(15,19,124,1) 44%, rgba(116,0,134,1) 100%);
+	color: white;
+}
+
+.sumo-ruleset-container img{
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+}
+
+.rankings-container h3{
+	margin: 0;
+}
+
+.rankings-bottom {
+	margin: 30px 0 0;
+}
+
+/*---------------------SUMO HISTORY-------------------------------*/
+
+.sumo-history-container {
+	background: linear-gradient(31deg, rgba(235,3,3,1) 0%, rgba(15,19,124,1) 45%, rgba(116,0,134,1) 100%);
+	color: white;
+  }
+
+.sumo-history-container img {
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+}
+
+#gyoji-img {
+	height: 200px;
+	width: 80%;
+	border: 3px solid black;
+	background-image: url('./gyoji.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	margin: 30px auto;
+}
+
+#gyoji-img p {
+	background-color: rgba(75, 75, 75, 0.733);
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin: 0;
+}
+
+.sumo-history-container p:last-child {
+	margin: 0 0 15px;
+}
+
+
+
+
+/*---------------------FOOTER-------------------------------*/
+
+footer {
+	text-align: center;
+	height: 50px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+footer a{
+	color: black;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+footer img {
+	width: 20px;
+	margin: 0 10px 5px;
+}
+/*---------------------MEDIA QUERIES------------------------------*/
+
+
+@media (min-width: 768px) {
+	header {
+		height: 300px;
+	}
+
+	.wrestlerPic img {
+		height: 250px;
+	}
+	
+	.allowances-disqualifications-container {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.rankings-bottom {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	
+	.tournament-container table {
+		font-size: 1em;
+	}
+
+	#gyoji-img {
+		width: 60%;
+		height: 300px;
+	}
+}
+
+
+@media (min-width: 1024px){
+
+	#main-heading, #main-heading-jp {
+		font-size: 2.8em;
+	}
+
+	.sumodex-content-container {
+		flex-direction: row;
+	}
+
+	.sumodex-left-side {
+		border-bottom: 0;
+		border-right: 3px black solid;
+	}
+
+	.panel img {
+		width: 60%;
+	}
+
+	.sumodex-right-side {
+		font-size: 1.3em;
+	}
+	
+	.wrestlerPic, .wrestlerInfo {
+		width: 70%;
+	}
+
+	.wrestlerName {
+		height: 50px;
+		font-size: 2em;
+		text-align: center;
+	}
+
+	
+	.tournament-container table {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	#recent-tournaments-table {
+		font-size: 1em;
+	}
+
+	.sumo-ruleset-body {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.sumo-ruleset-body p:first-child {
+		margin: 0;
+	}
+
+	.sumo-ruleset-body img {
+		width: 90%;
+	}
+
+	.prematch-ritual-container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.prematch-ritual-text {
+		width: 60%;
+	}
+
+	#sumo-history-img {
+		width: 35%;
+		margin: 20px 30px;
+		float: left;
+	}
+
+	#gyoji-img {
+		width: 30%;
+		height: 400px;
+	}
+	
+}

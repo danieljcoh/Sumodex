@@ -20,6 +20,7 @@
 		<table class="table table-dark">
 			<thead>
 				<tr>
+					<th>ID</th>
 					<th>Shikona</th>
 					<th>Real Name</th>
 					<th>Rank</th>
@@ -34,6 +35,7 @@
 			<tbody>
 				<c:forEach items="${allSumoWrestlers}" var="allSumoWrestlers">
 				<tr>
+					<td>${allSumoWrestlers.id}</td>
 					<td><a href="/wrestlers/edit/${allSumoWrestlers.id}">${allSumoWrestlers.shikona}</a></td>
 					<td>${allSumoWrestlers.name}</td>
 					<td>${allSumoWrestlers.sumoRank}</td>

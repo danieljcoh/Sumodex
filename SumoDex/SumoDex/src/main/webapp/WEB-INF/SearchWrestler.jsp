@@ -18,7 +18,7 @@
 	</div>
 <div class="container">
 		<h3>Sumo Wrestlers</h3>
-		<table class="table table-dark table-hover table-bordered">
+		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
 					<th>Shikona</th>
