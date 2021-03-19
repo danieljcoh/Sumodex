@@ -434,6 +434,10 @@
 		 <iframe width="420" height="315"
 			src="https://www.youtube.com/playlist?list=PL_43pSa7LSO7NQ7xhqgcha-YpkRTOUBhi">
 		</iframe> 
+		<p>Finally here is a link to Wikipedia with useful terms and definitions within the world of Sumo. <a target="_blank" href="https://en.wikipedia.org/wiki/Glossary_of_sumo_terms">Sumo Terms</a></p>
+		<p>If you've gotten it this far, I thank you for participating in my web application. I'd love to hear some comments from you or some feedback so feel free to drop a comment 
+		or leave some feedback and critique! I am always looking to improve!</p>
+		<p><a target="_blank" href="#">Feedback or Critique</a>
 		</div>
 	</section>
 
