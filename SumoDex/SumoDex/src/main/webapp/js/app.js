@@ -16,3 +16,20 @@ for (i = 0; i < acc.length; i++) {
       }
     });
 }
+
+//Prevent Refresh of Page on Button Click
+preventDef.addEventListener('click', function(event){
+	
+	event.preventDefault();
+});
+
+//Stop scrolling on page refresh
+$(window).scroll(function() {
+  sessionStorage.scrollTop = $(this).scrollTop();
+});
+
+$(document).ready(function() {
+  if (sessionStorage.scrollTop != "undefined") {
+    $(window).scrollTop(sessionStorage.scrollTop);
+  }
+});

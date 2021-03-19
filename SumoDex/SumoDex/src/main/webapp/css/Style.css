@@ -354,7 +354,7 @@ tr:nth-child(even) {
 	height: 200px;
 	width: 80%;
 	border: 3px solid black;
-	background-image: url('./gyoji.jpg');
+	background-image: url('/images//gyoji.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
