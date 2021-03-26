@@ -49,7 +49,7 @@ public class SumoDexController {
 		int nextId = (int) (id + 1);
 		viewModel.addAttribute("wrestler", nextId);
 		if(nextId == 3) {
-			nextId = 1;
+			nextId = 8;
 			return "redirect:/wrestler/" + nextId;
 		}
 		return "redirect:/wrestler/" + nextId;
