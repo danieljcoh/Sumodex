@@ -16,7 +16,7 @@ for (i = 0; i < acc.length; i++) {
       }
     });
 }
-
+/*
 //Prevent Refresh of Page on Button Click
 preventDef.addEventListener('click', function(event){
 	
@@ -63,5 +63,5 @@ if (top !== null) {
 window.addEventListener("beforeunload", () => {
   localStorage.setItem("reload-scroll", sidebar.scrollTop);
 });
-
+*/
 

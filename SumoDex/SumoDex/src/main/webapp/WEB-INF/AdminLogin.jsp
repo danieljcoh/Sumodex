@@ -9,19 +9,23 @@
 <title>Admin Home</title>
 </head>
 <body>
+	<nav class="nav flex-column font-weight-bold h3 border border-danger d-inline-block ml-5 mt-5">
+  		<a class="nav-link active text-success" href="/wrestler/1">Go To Sumodex</a>
+	</nav>
 	<div class="container">
   		<div class="row">
     		<div class="col-sm">
-      			<form method="POST" action="/admin/login">
-						<div class="form-group">
-							<label>ID#: </label>
-							<input class="form-control" type="password" name="idNumber">
+    		<p>${errorFromLoggingIn}</p>
+					<form method="POST" action="/admin/login">
+						<div class="form-group mt-5">
+							<label>Username:</label>
+							<input class="form-control" type="text" name="loginUsername">
 						</div>
-						<div class="form-group">
-							<label>Password: </label>
-							<input class="form-control" type="password" name="passwordString">
+						<div class="form-group mt-5">
+							<label>Password:</label>
+							<input class="form-control" type="password" name="loginPassword">
 						</div>
-							<button class="btn btn-primary" type="submit">Submit</button>
+							<button class="btn btn-danger">Submit</button>
 					</form>
     		</div>
   		</div>

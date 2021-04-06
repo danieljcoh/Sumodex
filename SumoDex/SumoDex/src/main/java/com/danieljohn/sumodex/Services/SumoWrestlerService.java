@@ -20,7 +20,7 @@ public class SumoWrestlerService {
 		return this.swRepo.findAll();
 	}
 	
-	//GET ON SUMO WRESTLER
+	//GET ONE SUMO WRESTLER
 	public SumoWrestler getById(Long id) {
 		return this.swRepo.findById(id).orElse(null);
 	}

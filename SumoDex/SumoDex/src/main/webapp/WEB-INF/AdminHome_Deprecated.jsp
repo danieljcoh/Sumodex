@@ -9,14 +9,9 @@
 <title>Admin Home</title>
 </head>
 <body>
-	<div class="row">
-		<nav class="nav flex-column col-sm font-weight-bold h3 d-inline-block ml-5 mt-5">
-  			<a class="nav-link active text-success" href="/wrestler/1">Go To Sumodex</a>
-		</nav>
-		<nav class="nav flex-column col-sm font-weight-bold h3 d-inline-block ml-5 mt-5 mr-5 text-right">
-  			<a class="nav-link active text-danger" href="/admin/logout">Logout</a>
-		</nav>
-	</div>
+	<nav class="nav flex-column font-weight-bold h3 border border-success d-inline-block ml-5 mt-5">
+  		<a class="nav-link active text-success" href="/wrestler/1">Go To Sumodex</a>
+	</nav>
 	<div class="container h-100">
   		<div class="row d-flex flex-row h-100">
     		<div class="col-sm mx-auto mt-3">
@@ -36,9 +31,37 @@
       			<div class="card">
   				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
   					<div class="card-body">
+    					<h4 class="card-title">Manage Passwords</h4>
+    					<p class="card-text">
+     					Click here to view a list of Passwords, Create new ones,
+     					edit old ones, or delete them.
+    					</p>
+    					<a href="/admin/passwordList" class="btn btn-info col text-center">Manage Passwords</a>
+  					</div>	
+				</div>
+    		</div>
+    		<div class="col-sm mx-auto mt-3">
+      			<div class="card">
+  				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
+  					<div class="card-body">
+    					<h4 class="card-title">Manage Champions</h4>
+    					<p class="card-text">
+     					Click here to view a list of Champions, Create new ones,
+     					edit old ones, or delete them.
+    					</p>
+    					<a href="/champions" class="btn btn-warning col text-center">Manage Champions</a>
+  					</div>
+				</div>
+    		</div>
+        </div>
+        <div class="row d-flex flex-row h-100">
+    		<div class="col-sm mx-auto mt-3">
+      			<div class="card">
+  				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
+  					<div class="card-body">
     					<h4 class="card-title"> Manage Feedback</h4>
     					<p class="card-text">
-     					Click here to view a list of User Feedback , Create new ones,
+     					Click here to view a list of admin, Create new ones,
      					edit old ones, or delete them.
     					</p>
     					<a href="/admin/userFeedbackList" class="btn btn-success col text-center">Manage Feedback</a>
@@ -51,10 +74,23 @@
   					<div class="card-body">
     					<h4 class="card-title">Manage Admin</h4>
     					<p class="card-text">
-     					Click here to view a list of Admin, Create new ones,
+     					Click here to view a list of feedback, Create new ones,
      					edit old ones, or delete them.
     					</p>
     					<a href="/admin/adminList" class="btn btn-dark col text-center">Manage Admin</a>
+  					</div>
+				</div>
+    		</div>
+    		<div class="col-sm mx-auto mt-3">
+      			<div class="card">
+  				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
+  					<div class="card-body">
+    					<h4 class="card-title">Manage Something</h4>
+    					<p class="card-text">
+     					Click here to view a list of feedback, Create new ones,
+     					edit old ones, or delete them.
+    					</p>
+    					<a href="#" class="btn btn-secondary col text-center">Manage Something</a>
   					</div>
 				</div>
     		</div>

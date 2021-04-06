@@ -5,10 +5,11 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.danieljohn.sumodex.Models.SumoWrestler;
+import com.danieljohn.sumodex.Models.UserFeedback;
 
 @Repository
-public interface SumoWrestlerRepository extends CrudRepository<SumoWrestler, Long>{
+public interface UserFeedbackRepository extends CrudRepository<UserFeedback, Long>{
 
-	List<SumoWrestler> findAll();
+	List<UserFeedback> findAll();
+	
 }

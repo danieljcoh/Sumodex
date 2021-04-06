@@ -20,7 +20,7 @@
 		<h1 id='main-heading'>Welcome to Sumodex</h1>
 		<h1 id='main-heading-jp'>ズモ図鑑</h1>
 		<marquee behavior ="scroll" direction="left" scrollamount="5" style="color:white; font-weight: bold;">
-		<h4>We are on day 11 of the Haru Basho! UPDATE: Website Japanese translation coming soon.</h4></marquee>
+		<h4>Terunofuji has won the 2021 Haru Basho! In other news, the websites Japanese translation coming soon.</h4></marquee>
 		
 	</header>
 	<p id="artist-credit">Art credit to <a target="_blank" href="https://www.artstation.com/dianayanevaart">Diana Yaneva	</a></p>
@@ -454,7 +454,7 @@
 						<p>Finally here is a link to Wikipedia with useful terms and definitions within the world of Sumo. <a target="_blank" href="https://en.wikipedia.org/wiki/Glossary_of_sumo_terms">Sumo Terms.</a></p>
 						<br>
 						<p>If you've gotten it this far, I thank you for participating in my web application. I'd love to hear some comments from you or some feedback so feel free to drop a comment 
-						or <a target="_blank" href="#">leave some feedback and critique!</a> I am always looking to improve!</p>
+						or <a target="_blank" href="/admin/user/feedback/createUserFeedback">leave some feedback and critique!</a> I am always looking to improve!</p>
 						<br>	
 					</div>
 	
@@ -471,9 +471,10 @@
 
 	<footer>
 		<a href="https://ko-fi.com/danieljcoh" target="_blank">Buy us a coffee! <img src="/svg/mug-hot-solid.svg"/></a>
+		<a href="/admin/user/feedback/createUserFeedback">Leave Feedback!</a>
+		
 		
 	</footer>
-	<!-- <script src="/js/app.js"></script> -->
 	<script src="/js/app.js"></script>
 
 </body>
