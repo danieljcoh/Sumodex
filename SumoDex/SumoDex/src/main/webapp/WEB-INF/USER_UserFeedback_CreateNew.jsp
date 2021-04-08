@@ -16,6 +16,8 @@
 				<p>${error}</p>
 			</c:forEach>
 			<hr>
+		
+		<div class="container">
 			<form:form method="POST" action="/admin/user/feedback/submitNewFeedback" modelAttribute="userFeedback">
 				<div class="form-group">
 					<form:label class="col-sm-2 col-form-label" path="usersName"> Users Name: 
@@ -29,12 +31,16 @@
 					</form:label>
 				</div>
 				<div>
-					<form:label class="col-sm-2 col-form-label" path="feedbackSection"> Message:
-					<form:input path="feedbackSection"/>
+					<form:label class="col-sm-2 col-form-labels" path="feedbackSection"> Message:
+					<form:input class="input-lg" path="feedbackSection"/>
 					</form:label>
 				</div>
-			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2">Create Feedback or Comment</button>
+			<button class="btn btn-dark col-sm-4 offset-sm-0 mt-4 mr-10 form-control form-inline mb-2 mr-sm-2 mb-5">Create Feedback or Comment</button>
 		</form:form>
+		</div>
 	</div>
+	
+	  		<a class="font-weight-bold h3 d-inline text-right text-danger pt-5 mt-5 ml-5" href="/wrestler/1">Go Back To Sumodex</a>
+	
 </body>
 </html>

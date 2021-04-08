@@ -11,7 +11,7 @@
 </head>
 <body>
 	<nav class="nav flex-column font-weight-bold h3 border border-success d-inline-block ml-5 mt-5">
-  		<a class="nav-link active text-success" href="/admin/home">Go To Admin Home</a>
+  		<a class="nav-link active text-success" href="/admin/dashboardHome">Go To Admin Home</a>
 	</nav>
 	<div class="container">
 		<div class="row">

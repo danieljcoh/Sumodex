@@ -30,6 +30,7 @@ import com.danieljohn.sumodex.Services.SumoWrestlerService;
 @RequestMapping("/wrestlers")
 public class SumoWrestlerController {
 
+	//This is an Admin Page so login and Session are both required to access. Even though these pages are not labeled "/admin/"
 	
 	@Autowired
 	private SumoWrestlerService swService;
@@ -43,14 +44,21 @@ public class SumoWrestlerController {
 	
 	@GetMapping("")
 	public String wrestlers(Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		List<SumoWrestler> allSumoWrestlers = this.swService.getAllSumoWrestlers();	
 		viewModel.addAttribute("allSumoWrestlers", allSumoWrestlers);
 		return "SumoWrestlerHome.jsp";
 	}
 	
-	//Why @ModelAttribute: It holds our info, it also let's us connect the blank info from the  java bean to the front-end form
 	@GetMapping("/createNewWrestler")
-	public String newWrestler(@ModelAttribute("wrestler") SumoWrestler wrestler, Model viewModel) {
+	public String newWrestler(@ModelAttribute("wrestler") SumoWrestler wrestler, Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		return "NewSumoWrestler.jsp";
 	}
 	
@@ -65,7 +73,11 @@ public class SumoWrestlerController {
 	}
 	
 	@GetMapping("/edit/{id}")
-	public String editWrestler(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
+	public String editWrestler(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		viewModel.addAttribute("wrestler", swService.getById(id));
 		return "EditSumoWrestler.jsp";
 	}
@@ -80,7 +92,11 @@ public class SumoWrestlerController {
 	}
 	
 	@GetMapping("delete/{id}")
-	public String deleteWrestler(@PathVariable("id") Long id) {
+	public String deleteWrestler(@PathVariable("id") Long id, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		this.swService.deleteWrestler(id);;
 		return "redirect:/wrestlers";
 	}

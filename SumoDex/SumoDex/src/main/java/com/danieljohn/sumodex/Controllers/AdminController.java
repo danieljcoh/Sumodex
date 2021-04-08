@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.danieljohn.sumodex.Models.AdminUser;
+import com.danieljohn.sumodex.Models.SumoWrestler;
 import com.danieljohn.sumodex.Models.UserFeedback;
 import com.danieljohn.sumodex.Repositories.AdminUserRepository;
 import com.danieljohn.sumodex.Services.AdminUserService;
@@ -87,14 +88,22 @@ public class AdminController {
 	
 	//FEEDBACK SECTION
 	@GetMapping("/userFeedbackList")
-	public String userFeedbackList(Model viewModel) {
+	public String userFeedbackList(Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		List<UserFeedback> allUserFeedback = this.ufService.getUserFeedbacks();	
 		viewModel.addAttribute("allUserFeedback", allUserFeedback);
 		return "UserFeedbackList.jsp"; 
 	}
 	
 	@GetMapping("/feedback/createUserFeedback")
-	public String newUserFeedback(@ModelAttribute("userFeedback") UserFeedback userCommentsAndFeedback, Model viewModel) {
+	public String newUserFeedback(@ModelAttribute("userFeedback") UserFeedback userCommentsAndFeedback, Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		return "UserFeedback_CreateNew.jsp";
 	}
 	
@@ -109,7 +118,12 @@ public class AdminController {
 	}
 	
 	@GetMapping("/feedback/editFeedback/{id}")
-	public String editFeedback(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("userFeedback") UserFeedback userCommentsAndFeedback) {
+	public String editFeedback(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("userFeedback") UserFeedback userCommentsAndFeedback,
+			HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		viewModel.addAttribute("userFeedback", ufService.getById(id));
 		return "UserFeedback_Edit.jsp";
 	}
@@ -124,7 +138,11 @@ public class AdminController {
 	}
 	
 	@GetMapping("/feedback/deleteFeedback/{id}")
-	public String deleteFeedback(@PathVariable("id") Long id) {
+	public String deleteFeedback(@PathVariable("id") Long id, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		this.ufService.deleteUserFeedback(id);;
 		return "redirect:/admin/userFeedbackList";
 	}
@@ -147,14 +165,22 @@ public class AdminController {
 	
 	//CREATING / EDITING / DELETING ADMIN
 	@GetMapping("/adminList")
-	public String adminList(Model viewModel) {
+	public String adminList(Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		List<AdminUser> allAdminUsers = this.auService.getAllAdminUsers();
 		viewModel.addAttribute("allAdminUsers", allAdminUsers);
 		return "AdminList.jsp"; 
 	}
 	
 	@GetMapping("/createNewAdmin")
-	public String newAdmin(@ModelAttribute("newAdmin") AdminUser newAdmin, Model viewModel) {
+	public String newAdmin(@ModelAttribute("newAdmin") AdminUser newAdmin, Model viewModel, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
 		return "Admin_NewAdmin.jsp";
 	}
 	
@@ -169,8 +195,25 @@ public class AdminController {
 		return "redirect:/admin/adminList";
 	}
 	
-	//NEED A DELETE ADMIN HERE
+	@GetMapping("/observe/{id}")
+	public String editAdmin(@PathVariable("id") Long id, Model viewModel, @ModelAttribute("userAdmin") AdminUser adminUser, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
+		viewModel.addAttribute("userAdmin", auService.findAdminById(adminUserId));
+		return "Admin_EditAdmin.jsp";
+	}
 	
+	@GetMapping("delete/{id}")
+	public String deleteAdmin(@PathVariable("id") Long id, HttpSession session) {
+		Long adminUserId = (Long)session.getAttribute("adminUser_Id");
+		if (adminUserId == null) {
+			return "redirect:/admin/home";
+		}
+		this.auService.deleteAdmin(adminUserId);
+		return "redirect:/adminList";
+	}
 	
 	
 	

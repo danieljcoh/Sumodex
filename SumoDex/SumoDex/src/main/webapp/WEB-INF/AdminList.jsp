@@ -30,7 +30,7 @@
 				<tr>
 					<td>${allAdminUsers.id}</td>
 					<td>${allAdminUsers.adminName}</td>
-					<td><a href="/admin/edit/${allAdminUsers.id}">${allAdminUsers.username}</a></td>
+					<td><a href="/admin/observe/${allAdminUsers.id}">${allAdminUsers.username}</a></td>
 				</c:forEach>
 			</tbody>
 		</table>

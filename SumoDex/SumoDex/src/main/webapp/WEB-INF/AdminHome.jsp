@@ -47,7 +47,7 @@
     		</div>
     		<div class="col-sm mx-auto mt-3">
       			<div class="card">
-  				<img class="card-img-top" src="/images/HeaderPic.jpg"  alt="Card Image">
+  				<img class="card-img-top pb-4" src="/images/HeaderPic.jpg"  alt="Card Image">
   					<div class="card-body">
     					<h4 class="card-title">Manage Admin</h4>
     					<p class="card-text">
