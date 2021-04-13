@@ -20,7 +20,7 @@
 		<h1 id='main-heading'>Welcome to Sumodex</h1>
 		<h1 id='main-heading-jp'>ズモ図鑑</h1>
 		<marquee behavior ="scroll" direction="left" scrollamount="5" style="color:white; font-weight: bold;">
-		<h4>Terunofuji has won the 2021 Haru Basho! In other news, the websites Japanese translation coming soon.</h4></marquee>
+		<h4>Terunofuji has won the 2021 Haru Basho! In other news, Juryo Wrestlers will be added soon.</h4></marquee>
 		
 	</header>
 	<p id="artist-credit">Art credit to <a target="_blank" href="https://www.artstation.com/dianayanevaart">Diana Yaneva	</a></p>
@@ -32,8 +32,7 @@
 			<br>
 			So that all the data on your favorite Sumo Wrestlers is in one place.</h3>
 			
-			<p>Currently, only Makuuchi and Juryo Sumo Wrestlers exist in the Sumodex because 
-			they are the only public profiles that I could find.</p>
+			<p>Currently, only Makuuchi Sumo Wrestlers exist in the Sumodex. I am working on adding Juryo Division Wrestlers.</p>
 		</div>
 		
 	<!-- SEARCH FUNCTION -->	
@@ -62,10 +61,10 @@
 				</div>
 					<div class="info-buttons">
 							<form method="GET" action="/wrestler/last/${wrestler.id}">
-								<button onclick="getScroll()" class="btn btn-warning">Last</button>
+								<button class="btn btn-warning">Last</button>
 							</form>		
 							<form method="GET" action="/wrestler/next/${wrestler.id}">
-								<button onclick="getScroll()" class="btn btn-warning">Next</button>
+								<button class="btn btn-warning">Next</button>
 							</form>
 						</div>	
 				</div>
@@ -90,9 +89,13 @@
 		</div>			
 	</div>
 	
+		
 		<!-- CURRENT SUMO TOURNAMENT -->
 		
 	</section>
+	
+	
+	<button id="testClick" >CLICK</button>
 
 	<section class="current-tournament-container">
 		<h1>WATCH THE CURRENT TOURNAMENT</h1>
@@ -203,6 +206,12 @@
 				</tr>
 				<tr>
 					<td>2021</td>
+					<td>Haru Basho</td>
+					<td>Terunofuji</td>
+					<td>12-3-0</td>
+				</tr>
+				<tr>
+					<td>2021</td>
 					<td>Hatsu Basho</td>
 					<td>Daieisho</td>
 					<td>13-2-0</td>
@@ -228,7 +237,7 @@
 				<tr>
 					<td>2020</td>
 					<td>Natsu Basho</td>
-					<td>No tournament</td>
+					<td>NO TOURNAMENT DUE TO COVID</td>
 					<td>13-2-0</td>
 				</tr>
 				<tr>
@@ -236,12 +245,6 @@
 					<td>Haru Basho</td>
 					<td>Hakuho</td>
 					<td>13-2-0</td>
-				</tr>
-				<tr>
-					<td>2020</td>
-					<td>Hatsu Basho</td>
-					<td>Tokushoryu</td>
-					<td>14-1-0</td>
 				</tr>
 			</table>
 			
@@ -471,11 +474,45 @@
 
 	<footer>
 		<a href="https://ko-fi.com/danieljcoh" target="_blank">Buy us a coffee! <img src="/svg/mug-hot-solid.svg"/></a>
-		<a href="/admin/user/feedback/createUserFeedback">Leave Feedback!</a>
+		<a href="/admin/user/feedback/createUserFeedback" target="_blank">Leave Feedback!</a>
 		
 		
 	</footer>
-	<script src="/js/app.js"></script>
+	
+	<!-- SEPARATE SCRIPT FILE -->
+	<!-- <script src="/js/app.js"></script> -->
+	
+	<script>
+	//Accordian JS Function
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	    acc[i].addEventListener("click", function() {
+	      /* Toggle between adding and removing the "active" class,
+	      to highlight the button that controls the panel */
+	      this.classList.toggle("active");
+	  
+	      /* Toggle between hiding and showing the active panel */
+	      var panel = this.nextElementSibling;
+	      if (panel.style.display === "block") {
+	        panel.style.display = "none";
+	      } else {
+	        panel.style.display = "block";
+	      }
+	    });
+	}
+
+	//Save Scroll Position
+	var testClick = document.getElementById("testClick")
+	
+	testClick.addEventListener("click", function(){
+		//scrollY is the amount the user has scrolled down
+		alert('Current scroll from the top: ' + document.pageYOffset);
+		});
+		
+	
+	</script>
 
 </body>
 </html>

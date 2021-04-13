@@ -9,13 +9,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-	<div class="bg-dark">
-	  	<ul class="nav nav-fill">
-  			<li class="nav-item">
-    			<a class="nav-link text-light bg-dark" href="/wrestler/1">Home</a>
-  			</li>
-		</ul>
-	</div>
+		<nav class="nav flex-column col-sm font-weight-bold h3 d-inline-block ml-5 mt-5">
+  			<a class="nav-link active text-success" href="/wrestler/1">Go To Sumodex</a>
+		</nav>
 <div class="container">
 		<h3>Sumo Wrestlers</h3>
 		<table class="table table-bordered table-hover">
