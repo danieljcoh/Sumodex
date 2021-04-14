@@ -61,10 +61,10 @@
 				</div>
 					<div class="info-buttons">
 							<form method="GET" action="/wrestler/last/${wrestler.id}">
-								<button class="btn btn-warning">Last</button>
+								<button id="sumodex-btn" class="btn btn-warning">Last</button>
 							</form>		
 							<form method="GET" action="/wrestler/next/${wrestler.id}">
-								<button class="btn btn-warning">Next</button>
+								<button id="sumodex-btn" class="btn btn-warning">Next</button>
 							</form>
 						</div>	
 				</div>
@@ -505,13 +505,22 @@
 
 	//Save Scroll Position
 	var testClick = document.getElementById("testClick")
+	var el = document.querySelector('.search-container');
+	var sumodex-btn = document.getElementById("sumodex-btn")
 	
-	testClick.addEventListener("click", function(){
-		//scrollY is the amount the user has scrolled down
-		alert('Current scroll from the top: ' + document.pageYOffset);
-		});
+	sumodex-btn.addEventListener("click", function sumodexPageLoadScroll(){
 		
+		window.scrollBy(0, 880);
+		alert("did it work?");
 	
+		//alert('Current scroll from the top: ' + document.pageYOffset);
+		});
+
+	
+	window.onload = function() {
+		alert("does this work");
+		 // yourFunction(param1, param2);
+		};
 	</script>
 
 </body>
