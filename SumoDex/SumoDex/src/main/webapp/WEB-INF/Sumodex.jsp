@@ -75,7 +75,7 @@
 							<p>Real Name: <c:out value="${wrestler.name}"/></p>
 							<p>Rank: <c:out value="${wrestler.sumoRank}"/></p>
 							<p>Birthday: <c:out value="${wrestler.birthday}"/></p>
-							<p>Birthplace:<c:out value="${wrestler.birthplace}"/></p>
+							<p>Birthplace: <c:out value="${wrestler.birthplace}"/></p>
 							<p>Heya: <c:out value="${wrestler.heya}"/></p>
 							<p>Height: <c:out value="${wrestler.height}"/></p>
 							<p>Weight: <c:out value="${wrestler.weight}"/></p>
