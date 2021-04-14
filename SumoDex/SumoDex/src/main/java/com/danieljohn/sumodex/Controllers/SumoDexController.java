@@ -48,7 +48,7 @@ public class SumoDexController {
 	public String seeNextWrestler(@PathVariable("id") Long id, HttpSession session, Model viewModel, @ModelAttribute("wrestler") SumoWrestler wrestler) {
 		int nextId = (int) (id + 1);
 		viewModel.addAttribute("wrestler", nextId);
-		if(nextId == 38) {
+		if(nextId == 43) {
 			nextId = 1;
 			return "redirect:/wrestler/" + nextId;
 		}
@@ -61,7 +61,7 @@ public class SumoDexController {
 		int lastId = (int) (id - 1);
 		viewModel.addAttribute("wrestler", lastId);
 		if(lastId == 0) {
-			lastId = 38;
+			lastId = 42;
 			return "redirect:/wrestler/" + lastId;		
 		}
 		return "redirect:/wrestler/" + lastId;
