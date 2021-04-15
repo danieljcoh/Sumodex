@@ -12,6 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="ISO-8859-1">
+<script src="/js/test.js"></script>
 <title>Sumodex</title>
 </head>
 <body>
@@ -61,10 +62,10 @@
 				</div>
 					<div class="info-buttons">
 							<form method="GET" action="/wrestler/last/${wrestler.id}">
-								<button id="sumodex-btn" class="btn btn-warning">Last</button>
+								<button id="sumodex_btn" class="btn btn-warning">Last</button>
 							</form>		
 							<form method="GET" action="/wrestler/next/${wrestler.id}">
-								<button id="sumodex-btn" class="btn btn-warning">Next</button>
+								<button id="sumodex_btn" class="btn btn-warning">Next</button>
 							</form>
 						</div>	
 				</div>
@@ -95,7 +96,7 @@
 	</section>
 	
 	
-	<button id="testClick" >CLICK</button>
+<!-- 	<button id="testClick" >CLICK</button> -->
 
 	<section class="current-tournament-container">
 		<h1>WATCH THE CURRENT TOURNAMENT</h1>
@@ -480,9 +481,9 @@
 	</footer>
 	
 	<!-- SEPARATE SCRIPT FILE -->
-	<!-- <script src="/js/app.js"></script> -->
+
 	
-	<script>
+	<!-- <script>
 	//Accordian JS Function
 	var acc = document.getElementsByClassName("accordion");
 	var i;
@@ -516,12 +517,7 @@
 		//alert('Current scroll from the top: ' + document.pageYOffset);
 		});
 
-	
-	window.onload = function() {
-		alert("does this work");
-		 // yourFunction(param1, param2);
-		};
-	</script>
+	</script> -->
 
 </body>
 </html>
