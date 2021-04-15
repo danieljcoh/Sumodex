@@ -62,10 +62,10 @@
 				</div>
 					<div class="info-buttons">
 							<form method="GET" action="/wrestler/last/${wrestler.id}">
-								<button id="sumodex_btn" class="btn btn-warning">Last</button>
+								<button id="sumodex_btn" onclick="setCookie()" class="btn btn-warning">Last</button>
 							</form>		
 							<form method="GET" action="/wrestler/next/${wrestler.id}">
-								<button id="sumodex_btn" class="btn btn-warning">Next</button>
+								<button id="sumodex_btn" onclick="setCookie()" class="btn btn-warning">Next</button>
 							</form>
 						</div>	
 				</div>

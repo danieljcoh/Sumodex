@@ -1,7 +1,7 @@
 /**
  * 
  */
-	
+
 	
 	window.onload = function(){
 	
@@ -35,11 +35,17 @@
 	
 	//SCROLL TO SUMODEX
 	function scrollToSumodex(){
-		
-		const content = document.getElementById("searchBarTitle");
-		if(content){
-			content.scrollIntoView();
+		if(document.cookie){
+			const content = document.getElementById("searchBarTitle");
+				if(content){
+				content.scrollIntoView();
+			}
 		}
+	}
+		
+	//SET COOKIE SO THAT SCROLL TO SUMODEX WORKS AFTER FIRST VISIT
+	function setCookie(){
+		document.cookie = "username=John Jane Doe; expires=00:00:00 UTC;";
 	}
 	
 	
