@@ -202,7 +202,7 @@
 				<tr>
 					<th>Year</th>
 					<th>Honbash</th>
-					<th>Shikona</th>
+					<th>Winner</th>
 					<th>Final Score</th>
 				</tr>
 				<tr>
