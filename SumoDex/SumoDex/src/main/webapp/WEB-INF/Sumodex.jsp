@@ -453,19 +453,21 @@
 			<div class="panel" style="background-color:#2746f5;">
 				<div class="learn-more-container">
 					<div class="learn-more-content">
-						<p>I have compiled a YouTube playlist of some cool or fun Sumo videos for you to watch! If you want to discover more about Sumo, feel free to oblige!</p>
+						<p>The video to the right is a great video that goes fairly in-depth into the world of Sumo. Great for beginners.</p>
 						<br>
-						<p>Finally here is a link to Wikipedia with useful terms and definitions within the world of Sumo. <a target="_blank" href="https://en.wikipedia.org/wiki/Glossary_of_sumo_terms">Sumo Terms.</a></p>
+						<p>Also, separately, I have compiled a <a target="_blank" href="https://www.youtube.com/playlist?list=PL_43pSa7LSO7NQ7xhqgcha-YpkRTOUBhi">YouTube playlist</a> of some other cool and/or fun Sumo videos for you to watch! If you want to discover more about Sumo, feel free to oblige!</p>
+						<br>
+						<p>Finally, here is a link to Wikipedia with useful terms and definitions within the world of Sumo. <a target="_blank" href="https://en.wikipedia.org/wiki/Glossary_of_sumo_terms">Sumo Terms.</a></p>
 						<br>
 						<p>If you've gotten it this far, I thank you for participating in my web application. I'd love to hear some comments from you or some feedback so feel free to drop a comment 
-						or <a target="_blank" href="/admin/user/feedback/createUserFeedback">leave some feedback and critique!</a> I am always looking to improve!</p>
+						or <a target="_blank" href="/admin/user/feedback/createUserFeedback">leave some feedback and critique!</a> We are always looking to improve!</p>
 						<br>	
 					</div>
 	
 					<div class="learn-more-video">
 						<iframe  
 							id="learn-more-yt-playlist"
-							src="https://www.youtube.com/embed/videoseries?list=PL_43pSa7LSO7NQ7xhqgcha-YpkRTOUBhi" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							src="https://www.youtube.com/embed/UJRH0NCEXy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 						</iframe> 
 					</div>
 				</div>
@@ -479,45 +481,6 @@
 		
 		
 	</footer>
-	
-	<!-- SEPARATE SCRIPT FILE -->
-
-	
-	<!-- <script>
-	//Accordian JS Function
-	var acc = document.getElementsByClassName("accordion");
-	var i;
-
-	for (i = 0; i < acc.length; i++) {
-	    acc[i].addEventListener("click", function() {
-	      /* Toggle between adding and removing the "active" class,
-	      to highlight the button that controls the panel */
-	      this.classList.toggle("active");
-	  
-	      /* Toggle between hiding and showing the active panel */
-	      var panel = this.nextElementSibling;
-	      if (panel.style.display === "block") {
-	        panel.style.display = "none";
-	      } else {
-	        panel.style.display = "block";
-	      }
-	    });
-	}
-
-	//Save Scroll Position
-	var testClick = document.getElementById("testClick")
-	var el = document.querySelector('.search-container');
-	var sumodex-btn = document.getElementById("sumodex-btn")
-	
-	sumodex-btn.addEventListener("click", function sumodexPageLoadScroll(){
-		
-		window.scrollBy(0, 880);
-		alert("did it work?");
-	
-		//alert('Current scroll from the top: ' + document.pageYOffset);
-		});
-
-	</script> -->
 
 </body>
 </html>
